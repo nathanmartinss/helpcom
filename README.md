@@ -24,10 +24,10 @@ Com base nos itens usados na receita, o sistema pode ajudar a determinar o preç
 
 
 - ## Programas utilizados
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" width="14" height="14"/> IDE: IntelliJ IDEA
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" width="14" height="14"/> IntelliJ IDEA
 
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="14" height="14"/> Banco de Dados: PostgreSQL
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="14" height="14"/> PostgreSQL
 
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="14" height="14"/> Figma 
