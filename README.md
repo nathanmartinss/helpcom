@@ -41,6 +41,6 @@ Se você deseja contribuir para este projeto, por favor, sinta-se à vontade par
 # Licença
 Este projeto é para fins acadêmicos na faculdade de engenharia de Sorocaba (FACENS). 
 
-# <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="14" height="14"/> Versão atual: 1.0
+# <img src="https://cdn-icons-png.flaticon.com/256/3098/3098186.png" width="14" height="14"/> Versão atual: 1.0
 
 # 2023 © Todos os direitos reservados pelos autores.
