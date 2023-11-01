@@ -22,7 +22,13 @@ public class ItemController {
     }
 
     @GetMapping
-    public List<ItemDTO> listarItems () {
+    public List<ItemDTO> listarItems() {
         return repository.findAll().stream().map(ItemDTO :: new).toList();
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void excluirItem(@PathVariable Long id) {
+        repository.deleteById(id);
     }
 }
