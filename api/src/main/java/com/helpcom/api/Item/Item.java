@@ -18,8 +18,17 @@ public class Item {
     private String descItem;
     private String marcaItem;
 
-    public Item(ItemDTO dados) {
+    public Item(ItemDTORequest dados) {
         this.descItem = dados.descItem();
         this.marcaItem = dados.marcaItem();
+    }
+
+    public void atualizarInfo(ItemDTOResponse dados) {
+        if (dados.descItem() != null) {
+            this.descItem = dados.descItem();
+        }
+        if (dados.marcaItem() != null) {
+            this.marcaItem = dados.marcaItem();
+        }
     }
 }
