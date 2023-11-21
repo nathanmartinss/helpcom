@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Table(name = "Compras")
 @Entity(name = "Compra")
@@ -24,8 +24,8 @@ public class Compra {
     private Long idItem;
     private Integer qtdItem;
     private Integer valor;
-    private Date validade;
-    private Date dataCompra;
+    private LocalDate validade;
+    private LocalDate dataCompra;
 
     public Compra(CompraDTORequest dados) {
         this.idItem = dados.idItem();
