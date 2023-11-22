@@ -1,6 +1,5 @@
 package com.helpcom.api.Receita;
 
-import com.helpcom.api.Item.ItemDTOResponse;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
