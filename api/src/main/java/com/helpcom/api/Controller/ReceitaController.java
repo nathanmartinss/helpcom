@@ -3,7 +3,7 @@ package com.helpcom.api.Controller;
 import com.helpcom.api.Ingrediente.Ingrediente;
 import com.helpcom.api.Ingrediente.IngredienteDTO;
 import com.helpcom.api.Ingrediente.IngredienteRepository;
-import com.helpcom.api.Item.ItemDTOResponse;
+import com.helpcom.api.Ingrediente.IngredienteService;
 import com.helpcom.api.Receita.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,6 +25,9 @@ public class ReceitaController {
     @Autowired
     private ReceitaService receitaService;
 
+    @Autowired
+    private IngredienteService ingredienteService;
+
     @PostMapping
     @Transactional
     public void adicionarReceita(@RequestBody ReceitaDTORequest dados) {
@@ -42,6 +45,15 @@ public class ReceitaController {
         return receitas.stream()
                 .map(receitaService::mapToDTO)
                 .collect(Collectors.toList());
+    }
+
+    @GetMapping("/{id}")
+    public ReceitaDTOResponse listarReceitaPorId (@PathVariable Long id) {
+        Receita receita = receitaRepository.getReferenceById(id);
+        List<Ingrediente> ingredientes = ingredienteRepository.findByIdReceita(id);
+
+        List<IngredienteDTO> ingredienteDTOS = IngredienteService.converterListaParaDTO(ingredientes);
+        return new ReceitaDTOResponse(receita, ingredienteDTOS);
     }
 
     @PutMapping

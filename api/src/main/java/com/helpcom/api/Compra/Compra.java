@@ -34,6 +34,11 @@ public class Compra {
         this.validade = dados.validade();
         this.dataCompra = dados.dataCompra();
     }
+
+    public Compra(Long id, Integer valor) {
+        this.id = id;
+        this.valor = valor;
+    }
     public void atualizarInfo(CompraDTOResponse dados) {
         if (dados.idItem() != null) {
             this.idItem = dados.idItem();

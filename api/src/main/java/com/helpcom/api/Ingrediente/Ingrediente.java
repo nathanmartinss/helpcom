@@ -19,6 +19,9 @@ public class Ingrediente {
     private Long idItem;
     private Long idReceita;
     private Integer qtdIngrediente;
+
+    @Enumerated(EnumType.STRING)
+    @Column(columnDefinition = "unidade_medida")
     private UnidadeMedida unidadeMedida;
 
     public Ingrediente (IngredienteDTO dados, Long idReceita) {
